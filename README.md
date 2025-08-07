@@ -9,6 +9,9 @@ My ambition is simple: to explore the entirety of the digital universe as I can 
 
 > Right now, I know just enough to realize how much I don’t. This journal will be updated in bits and bursts, as I explore and try to make sense of it all.
 
+## 📚 Contents
+- [Change Log](CHANGELOG.md)
+
 ## 💡 Purpose
 
 I believe that writing is the best way to learn. This journal exists to help me:
