@@ -7,7 +7,7 @@ I intend to update it regularly, capturing what I learn as I go, refining it, an
 
 My ambition is simple: to explore the entirety of the digital universe as I can — until I either master it… or lose my mind trying.
 
-> I find myself in a strange place — aware of much, yet understanding so little. This journal will evolve irregularly, one fragment at a time, as I slowly piece together the bigger picture.
+> Right now, I know just enough to realize how much I don’t. This journal will be updated in bits and bursts, as I explore and try to make sense of it all.
 
 ## 💡 Purpose
 
