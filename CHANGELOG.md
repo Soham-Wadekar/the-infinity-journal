@@ -7,3 +7,4 @@ All notable learning updates to **The Infinity Journal** will be documented in t
 - Started the **The Infinity Journal**
 - Added the `CHANGELOG.md` file
 - Created **python** directory
+- Added threading in `concurrency`
