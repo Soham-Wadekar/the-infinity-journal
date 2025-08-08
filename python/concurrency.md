@@ -12,7 +12,7 @@ While Python's Global Interpreter Lock (GIL) limits true multithreaded CPU-bound
 
 ---
 
-## 🧵 Threading
+## Threading
 
 A thread is like a mini program inside the main program. Multiple threads can be used concurrently to do different things at the same time.
 
