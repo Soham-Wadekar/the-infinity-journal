@@ -11,3 +11,4 @@ All notable learning updates to **The Infinity Journal** will be documented in t
 
 ## Day 1 / ∞ [2025-08-08]
 - Explored threading tools in Python
+- Added the OS and Processes module

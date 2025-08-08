@@ -12,6 +12,7 @@ Here you'll find everything I've learned (and continue to learn) about Python â€
 - [Functions and Scope](./functions.md)
 - [Object-Oriented Programming](./oop.md)
 - [Modules and Packages](./modules.md)
+- [OS and Processes](./os-processes.md)
 - [File Handling](./file-handling.md)
 - [Error Handling](./exceptions.md)
 - [Decorators & Generators](./decorators-generators.md)
