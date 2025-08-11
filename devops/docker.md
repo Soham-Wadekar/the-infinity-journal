@@ -13,6 +13,8 @@ It enables developers to create consistent environments across development, test
 - [Docker Images](#docker-images)
     - [Dockerfile](#dockerfile)
 - [Docker Containers](#docker-containers)
+- [Docker Networking](#docker-networking)
+- [Docker Storage](#docker-storage)
 
 By isolating applications and their dependencies, Docker streamlines deployment, improves scalability, and integrates seamlessly into modern DevOps workflows.  
 Whether you’re running microservices, experimenting with a new stack, or managing production workloads, Docker makes environment management faster, more predictable, and more reproducible.
@@ -127,5 +129,33 @@ All the commands listed below should have `docker network` preceeding them.
 5. `ls`          List networks
 6. `prune`       Remove all unused networks
 7. `rm`          Remove one or more networks
+
+---
+
+## Docker Storage
+
+Docker storage is how Docker saves and manages data created or used by containers, either temporarily inside them or persistently outside them. Any data that you create inside a Docker container is stored in the container's writable layer.
+
+| Storage type | Description | Pros | Cons |
+|--------------|-------------|------|------|
+| **Container storage (writable layer)** | Data is stored inside the container’s filesystem. | Simple, no setup. | Data is deleted if container is removed. |
+| **Volume** | Data stored in a special location managed by Docker (usually under `/var/lib/docker/volumes/`). | Persistent, portable between containers, Docker-managed. | Slightly less direct control over exact location. |
+| **Bind mount** | Maps a directory from your host machine into the container. | Full control over storage location, instant file changes between host and container. | Less isolation — depends on host’s file system and permissions. |
+
+### Docker Volume Commands
+
+All the commands listed below should have `docker volume` preceeding them.
+
+1. `create`      Create a volume
+2. `inspect`     Display detailed information on one or more volumes
+3. `ls`          List volumes
+4. `prune`       Remove unused local volumes
+5. `rm`          Remove one or more volumes
+
+Volumes can be created and mapped as follows:
+```bash
+docker volume create volume-name
+docker run -v volume-name:path-in-container image-name
+```
 
 ---
