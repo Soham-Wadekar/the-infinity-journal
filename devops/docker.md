@@ -11,7 +11,6 @@ It enables developers to create consistent environments across development, test
 - [Terminology](#terminology)
 - [Basic Commands](#basic-commands)
 - [Docker Images](#docker-images)
-    - [Dockerfile](#dockerfile)
 - [Docker Containers](#docker-containers)
 - [Docker Networking](#docker-networking)
 - [Docker Storage](#docker-storage)
@@ -46,7 +45,7 @@ Whether you’re running microservices, experimenting with a new stack, or manag
 4. `docker rm container-id`: Remove a container
 5. `docker images`: Lists images
 6. `docker rmi image-id`: Removes an image
-7. `docker exec -it container bash`: Executes a command in a running container. *This particular command starts an interactive bash pseudo-terminal inside a container*
+7. `docker exec -it container bash`: Executes a command in a running container. _This particular command starts an interactive bash pseudo-terminal inside a container_
 8. `docker logs container`: Displays container logs
 
 ---
@@ -54,6 +53,7 @@ Whether you’re running microservices, experimenting with a new stack, or manag
 ## Docker Images
 
 A Docker image is made up of layers. Each instruction in the image file is a new read-only layer. These instructions are written in a `Dockerfile`. The image is then created by running the command:
+
 ```bash
 docker build -t image-with-tag . 
 ```
@@ -61,6 +61,7 @@ docker build -t image-with-tag .
 An image should always be tagged using the `-t` flag during building. For example, `docker build -t my-image:1.0`, where `1.0` is the tag. The default tag is `:latest`, which should NOT be used for production.
 
 Docker images can be uploaded or taken from the Docker Registry as follows:
+
 ```bash
 docker push my-image:1.0            # Pushes to Docker Hub
 docker pull my-image:1.0            # Pulls from Docker Hub
@@ -69,9 +70,11 @@ docker pull my-image:1.0            # Pulls from Docker Hub
 Use `.dockerignore` to avoid copying unncessary files
 
 ### Dockerfile
+
 A Dockerfile is a blueprint of your image
 
 Common instructions in a Dockerfile are:
+
 | Instruction  | Purpose |
 |--------------|---------|
 | FROM         | Set the base image to use for the build |
@@ -93,6 +96,7 @@ Common instructions in a Dockerfile are:
 ---
 
 ## Docker Containers
+
 A container is a running instance of a Docker image. The following is the lifecycle of a container:
 
 > **Create → Start → Pause/Unpause → Stop → Remove**
@@ -110,7 +114,7 @@ A container is a running instance of a Docker image. The following is the lifecy
 
 ![Docker Networking](https://media.geeksforgeeks.org/wp-content/uploads/20230419172809/Docker-network-1.webp "Types of Network")
 
-By default, Docker creates three networks - bridge, host, and none 
+By default, Docker creates three networks - bridge, host, and none
 
 | Type   | How it Actually Works | Analogy |
 |--------|----------------------|---------|
@@ -153,6 +157,7 @@ All the commands listed below should have `docker volume` preceeding them.
 5. `rm`          Remove one or more volumes
 
 Volumes can be created and mapped as follows:
+
 ```bash
 docker volume create volume-name
 docker run -v volume-name:path-in-container image-name

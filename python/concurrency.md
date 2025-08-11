@@ -32,6 +32,7 @@ thread.join()           # Wait for the thread to finish
 A conflict between threads can occur if they try to modify the same variable, which can mess each other up (overwriting may occur) - called **race condition**. A `Lock` prevents this, by letting only one thread pass through at a time.
 
 A `Lock` is defined as follows:
+
 ```python
 lock = Lock()       # Imported from threading
 
@@ -75,10 +76,12 @@ print("Total time:", end - start, "seconds")
 ```
 
 A few important functions used with `ThreadPoolExecutor` are:
+
 - `as_completed()` - Returns tasks as they finish. Tasks don’t wait for slower ones before processing faster ones
 - `.shutdown(wait=False)` - Exits early without waiting for threads to finish
 
 ### Subclassing
+
 You can create a custom thread using the `Thread` class
 
 ```python
@@ -90,6 +93,7 @@ class CustomThread(Thread):
 ```
 
 ### Daemon Threads
+
 Daemon threads are background threads that don’t prevent the program from exiting. If only daemon threads remain, Python will terminate—even if they’re still running.
 
 Used for logging, monitoring, etc.
@@ -101,8 +105,9 @@ t1 = Thread(target=func(), daemon=True)
 ```
 
 ### Threading Tools
-- **Barrier:** A synchronization point where a fixed number of threads arrive, then proceed together. *Three friends are hiking. They go ahead once all of them are at the meeting point*
-- **Condition:** Threads wait for a certain condition to be fulfilled. *You eat food ONLY AFTER the waiter tells you that the food is ready*
-- **Event:** Threads wait until an event is set, then all threads go.  *Cars wait for the signal to turn green*
-- **Semaphore:** A counter that controls how many threads can access a resource. *There are three toilet stalls, so only three people can access it at the same time. Others have to wait*
-- **Timer:** A thread that runs after a certain delay. *A kitchen timer*
+
+- **Barrier:** A synchronization point where a fixed number of threads arrive, then proceed together. _Three friends are hiking. They go ahead once all of them are at the meeting point_
+- **Condition:** Threads wait for a certain condition to be fulfilled. _You eat food ONLY AFTER the waiter tells you that the food is ready_
+- **Event:** Threads wait until an event is set, then all threads go.  _Cars wait for the signal to turn green_
+- **Semaphore:** A counter that controls how many threads can access a resource. _There are three toilet stalls, so only three people can access it at the same time. Others have to wait_
+- **Timer:** A thread that runs after a certain delay. _A kitchen timer_

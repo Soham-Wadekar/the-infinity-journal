@@ -10,6 +10,7 @@ My ambition is simple: to explore the entirety of the digital universe as I can 
 > Right now, I know just enough to realize how much I don’t. This journal will be updated in bits and bursts, as I explore and try to make sense of it all.
 
 ## 📚 Contents
+
 - [DevOps](./devops/)
 - [Python](./python/)
 - [System Building](./system-building/)
@@ -18,6 +19,7 @@ My ambition is simple: to explore the entirety of the digital universe as I can 
 ## 💡 Purpose
 
 I believe that writing is the best way to learn. This journal exists to help me:
+
 - Reinforce concepts by documenting them
 - Reflect on how my understanding evolves
 - Share knowledge openly with others
@@ -31,4 +33,5 @@ Browse by topic, or search for keywords. Every note is written for clarity and c
 ---
 
 ### Author: Soham Wadekar, age 22
+
 ### Created on: Aug 7, 2025

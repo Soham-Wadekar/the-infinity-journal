@@ -44,6 +44,7 @@ result.stderr                   # Error
 ## Interacting with Child Processes
 
 Sometimes you need to start a program and communicate with it while it’s running. We can do that using `.Popen()` method.
+
 - `stdin`, `stdout` and `stderr` provide input, output and error communication in the pipeline
 - Input can be sent using `.communicate()` method
 

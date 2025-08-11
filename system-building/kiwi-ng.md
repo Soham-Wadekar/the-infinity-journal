@@ -9,13 +9,13 @@ It helps you build ready-to-deploy OS images tailored to specific use cases, whe
 
 - [What is KIWI NG?](#what-is-kiwi-ng)
 - [Key Features](#key-features)
-- [Installation](#installation)
+<!-- - [Installation](#installation)
 - [Basic Workflow](#basic-workflow)
 - [Appliance Descriptions](#appliance-descriptions)
 - [Building Images](#building-images)
 - [Supported Image Types](#supported-image-types)
 - [Useful Commands](#useful-commands)
-- [Resources & Documentation](#resources--documentation)
+- [Resources & Documentation](#resources--documentation) -->
 
 KIWI NG streamlines the complex process of assembling OS images by automating filesystem creation, package installation, and image packaging.  
 It is especially popular in the SUSE/openSUSE ecosystem but adaptable for other Linux distributions as well.
