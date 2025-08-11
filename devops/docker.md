@@ -101,3 +101,31 @@ A container is a running instance of a Docker image. The following is the lifecy
 - A Docker container is deleted (removed) with the `docker rm container-id` command
 
 **💡 Key point:** A container only lives as long as its main process is running. Once that process exits, the container stops even if there are background processes running.
+
+---
+
+## Docker Networking
+
+![Docker Networking](https://media.geeksforgeeks.org/wp-content/uploads/20230419172809/Docker-network-1.webp "Types of Network")
+
+By default, Docker creates three networks - bridge, host, and none 
+
+| Type   | How it Actually Works | Analogy |
+|--------|----------------------|---------|
+| Bridge | Docker creates a private virtual network on your computer. Containers get their own IPs and can talk to each other through this network. External access is possible through port mapping (`-p host:container`). | A gated neighborhood where each house (container) has its own address, and visitors must go through a security gate with a specific number (port mapping) to reach a house. |
+| Host   | The container shares the same network as the host machine, skipping Docker’s virtual network layer. It uses the host’s IP address directly. | Living inside the main building (your computer) with no walls between you — visitors can reach you directly without a guard. |
+| None   | Docker gives the container a network stack but no external connectivity. No internet, no other containers. | A cabin in the mountains with no roads, no phones, and no visitors — total isolation. |
+
+### Commands
+
+All the commands listed below should have `docker network` preceeding them.
+
+1. `connect`     Connect a container to a network
+2. `create`      Create a network
+3. `disconnect`  Disconnect a container from a network
+4. `inspect`     Display detailed information on one or more networks
+5. `ls`          List networks
+6. `prune`       Remove all unused networks
+7. `rm`          Remove one or more networks
+
+---

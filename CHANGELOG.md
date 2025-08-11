@@ -15,4 +15,4 @@ All notable learning updates to **The Infinity Journal** will be documented in t
 
 ## Day 2 / ∞ [2025-08-11]
 - Created **devops** directory
-- Added Docker information
+- Added Docker basics and networking
