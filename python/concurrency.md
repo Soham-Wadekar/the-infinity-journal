@@ -1,4 +1,4 @@
-# ⚙️ Concurrency in Python
+# ⚙️ Concurrency
 
 > _"Concurrency is not parallelism, but it enables parallelism."_ — Rob Pike
 

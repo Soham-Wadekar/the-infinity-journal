@@ -1,4 +1,4 @@
-# 🖥️ OS and Processes in Python
+# 🖥️ OS and Processes
 
 > _"Don't communicate by sharing memory; share memory by communicating."_ — Go proverb
 
