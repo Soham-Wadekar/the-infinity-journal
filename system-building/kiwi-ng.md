@@ -143,11 +143,13 @@ Confused at what I did just now? Don't worry, the mindfuck is real. Basically, w
 
 Here's a visualization for better understanding:
 
+```markdown
 Host Machine (Ubuntu)
 └── Docker Container (openSUSE Leap)
     ├── KIWI NG (builds `.raw` image)
     └── QEMU Virtual Machine
         └── KIWI-built OS (from `.raw` disk image)
+```
 
 ---
 
