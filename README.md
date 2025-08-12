@@ -14,7 +14,7 @@ My ambition is simple: to explore the entirety of the digital universe as I can 
 - [DevOps](./devops/)
 - [Python](./python/)
 - [System Building](./system-building/)
-- [Change Log](CHANGELOG.md)
+- [CHANGELOG](CHANGELOG.md)
 
 ## 💡 Purpose
 
