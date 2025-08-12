@@ -24,3 +24,4 @@ All notable learning updates to **The Infinity Journal** will be documented in t
 ## Day 3 / ∞ [2025-08-12]
 
 - Added installation and test build of OS systems using KIWI
+- Added modules and packaging in Python

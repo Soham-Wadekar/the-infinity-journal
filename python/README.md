@@ -8,6 +8,7 @@ Here you'll find everything I've learned (and continue to learn) about Python â€
 
 ## ðŸ“š Contents
 
+- [Modules & Packages](./modules-packages.md)
 - [Concurrency](./concurrency.md)
 - [OS and Processes](./os-processes.md)
 
