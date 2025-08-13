@@ -9,6 +9,7 @@ Here you'll find notes and learnings on tools and techniques used to create Linu
 ## 📚 Contents
 
 - [KIWI NG (Linux Appliance Builder)](./kiwi-ng.md)
+- [Red Hat Package Manager](./rpm.md)
 
 > ⚠️ Work in Progress: This section is evolving. Some topics may be incomplete or draft versions. Updates will be ongoing.
 

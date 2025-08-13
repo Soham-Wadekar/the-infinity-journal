@@ -25,3 +25,7 @@ All notable learning updates to **The Infinity Journal** will be documented in t
 
 - Added installation and test build of OS systems using KIWI
 - Added modules and packaging in Python
+
+## Day 4 / ∞ [2025-08-13]
+
+- Added information about RPM in System Building
