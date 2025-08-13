@@ -42,9 +42,9 @@ It supports multiple image types such as ISO, raw disk images, and cloud images.
 
 ## Installation
 
-I tried multiple ways to install KIWI NG on my Ubuntu machine, but faced a lot of issues. KIWI NG is available in the package manager of OpenSUSE. So, I decided to create a container running OpenSUSE inside, with Docker. The installation is with respect to it:
+I tried multiple ways to install KIWI NG on my Ubuntu machine, but faced a lot of issues. KIWI NG is available in the package manager of openSUSE. So, I decided to create a container running openSUSE inside, with Docker. The installation is with respect to it:
 
-**Step 1:** Copy the following Dockerfile. (It is custom made to install KIWI NG). Essentially, it uses OpenSUSE as a base image, installs the packages required to test KIWI NG, and clones the KIWI NG Git repository inside it. The shell starts by default, once the container runs.
+**Step 1:** Copy the following Dockerfile. (It is custom made to install KIWI NG). Essentially, it uses openSUSE as a base image, installs the packages required to test KIWI NG, and clones the KIWI NG Git repository inside it. The shell starts by default, once the container runs.
 
 ```Dockerfile
 FROM opensuse/leap:15.5
@@ -81,7 +81,7 @@ CMD ["/bin/bash"]
 docker build -t kiwi-ng:latest .
 ```
 
-**Step 3:** Run a Docker container using the image in `privileged` mode. You will be taken inside the OpenSUSE shell as `root`.
+**Step 3:** Run a Docker container using the image in `privileged` mode. You will be taken inside the openSUSE shell as `root`.
 
 ```bash
 docker run -it --privileged kiwi-ng:latest
@@ -136,10 +136,10 @@ This is really confusing for me too, so thought I should elaborate, for my sake 
 Confused at what I did just now? Don't worry, the mindfuck is real. Basically, what I did was:
 
 1. Ran Ubuntu on host machine
-2. Started a Docker container with OpenSUSE Leap as its OS
+2. Started a Docker container with openSUSE Leap as its OS
 3. Built a raw image using KIWI
 4. Created a QEMU VM inside the container using the image
-5. Booted another OpenSUSE Leap OS inside the QEMU VM
+5. Booted another openSUSE Leap OS inside the QEMU VM
 
 Here's a visualization for better understanding:
 
