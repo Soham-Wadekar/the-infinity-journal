@@ -35,3 +35,4 @@ All notable learning updates to **The Infinity Journal** will be documented in t
 - Added workflow and commands in KIWI NG
 - Added image structure details in KIWI NG
 - Started Jenkins in DevOps
+- Added XML in Data Formats
