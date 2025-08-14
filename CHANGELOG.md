@@ -33,3 +33,4 @@ All notable learning updates to **The Infinity Journal** will be documented in t
 ## Day 5 / ∞ [2025-08-14]
 
 - Added workflow and commands in KIWI NG
+- Added image structure details in KIWI NG

@@ -13,9 +13,7 @@ It helps you build ready-to-deploy OS images tailored to specific use cases, whe
 - [Test Image Build](#test-image-build)
 - [Basic Workflow](#basic-workflow)
 - [Useful Commands](#useful-commands)
-<!-- - [Appliance Descriptions](#appliance-descriptions)
-- [Building Images](#building-images)
-- [Supported Image Types](#supported-image-types) -->
+- [Images](#images)
 - [Resources & Documentation](#resources--documentation)
 
 KIWI NG streamlines the complex process of assembling OS images by automating filesystem creation, package installation, and image packaging.  
@@ -179,6 +177,41 @@ The basic syntax of any KIWI NG command is `kiwi-ng [--global-options] service <
 8. `kiwi-ng image info`: Provides information about a specified image description. [Options](https://osinside.github.io/kiwi/commands/image_info.html#options) are listed here.
 
 ---
+
+## Images
+
+### Image Description Elements
+
+This section includes the required and optional elements that make up a valid image description.
+
+| Element        | Purpose                                                                                          | Required? | Repetition                  |
+|----------------|--------------------------------------------------------------------------------------------------|-----------|-----------------------------|
+| `<image>`      | Root element containing the entire image description.                                            | Yes       | Only once                   |
+| `<description>`| Identity of the image: author, contact, license, purpose/specification.                          | Yes       | Only once                   |
+| `<preferences>`| Configuration of the image: type, version, layout, partitioning.                                 | Yes       | Can repeat for different profiles/architectures |
+| `<repository>` | Defines software sources from which packages are installed.                                      | Yes       | Can repeat                   |
+| `<packages>`   | Lists software to include: packages, collections, archives, products.                            | Yes       | Can repeat                   |
+| `<users>`      | Predefines system user accounts to be included in the image.                                     | No        | Can repeat                   |
+| `<profiles>`   | Defines selectable build profiles/namespaces in the image description.                           | No        | Only once                    |
+| `<include>`    | Imports XML content from an external file into the description (single-level include only).      | No        | Can repeat                   |
+
+### Image Types
+
+| Image Type           | Purpose                                                                                           |
+|----------------------|---------------------------------------------------------------------------------------------------|
+| **ISO Hybrid Live Image**          | Portable bootable system from CD/DVD/USB for testing or debugging.                                |
+| **Virtual Disk Image**             | Disk image for use in cloud environments (e.g., EC2, GCE, Azure).                                 |
+| **OEM Expandable Disk Image**      | Disk image that auto-resizes to deployment hardware; supports installer media outputs.            |
+| **Docker Container Image**         | Tarball loadable via `docker load`, ready for container use.                                       |
+| **WSL Container Image**            | Image suitable for Windows Subsystem for Linux (WSL) environments.                                |
+| **KIS Root File System Image**     | Root filesystem image bundled with kernel and initrd—increasable for custom deployment use cases. |
+| **AWS Nitro Enclave Image**        | EFI-format initrd image for AWS Nitro Enclave or QEMU testing.                                 |
+
+Once KIWI creates or builds an image, it generates several output files.
+
+1. **Main Image Binary:** It is named as `<image-name>.<architecture>-<version>.<extension>`.
+2. **Packages List:** Generates a file which has a CSV-like dump of all the packages included in the image. It is named as `<image-name>.<architecture>-<version>.packages`
+3. **Verification File:** Generated to test the integrity of the package before it is used. It is named as `<image-name>.<architecture>-<version>.verified`
 
 ---
 
