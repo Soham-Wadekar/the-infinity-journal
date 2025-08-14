@@ -9,6 +9,7 @@ Here you'll find everything I've learned (and continue to learn) about DevOps �
 ## 📚 Contents
 
 - [Containers & Docker](./docker.md)
+- [Jenkins](./jenkins.md)
 
 > ⚠️ Work in Progress: Some of these notes are incomplete or in draft form. Updates will be made continuously.
 
