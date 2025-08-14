@@ -29,3 +29,7 @@ All notable learning updates to **The Infinity Journal** will be documented in t
 ## Day 4 / ∞ [2025-08-13]
 
 - Added information about RPM in System Building
+
+## Day 5 / ∞ [2025-08-14]
+
+- Added workflow and commands in KIWI NG

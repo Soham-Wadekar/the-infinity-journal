@@ -11,11 +11,11 @@ It helps you build ready-to-deploy OS images tailored to specific use cases, whe
 - [Key Features](#key-features)
 - [Installation](#installation)
 - [Test Image Build](#test-image-build)
-<!-- - [Basic Workflow](#basic-workflow)
-- [Appliance Descriptions](#appliance-descriptions)
+- [Basic Workflow](#basic-workflow)
+- [Useful Commands](#useful-commands)
+<!-- - [Appliance Descriptions](#appliance-descriptions)
 - [Building Images](#building-images)
-- [Supported Image Types](#supported-image-types)
-- [Useful Commands](#useful-commands) -->
+- [Supported Image Types](#supported-image-types) -->
 - [Resources & Documentation](#resources--documentation)
 
 KIWI NG streamlines the complex process of assembling OS images by automating filesystem creation, package installation, and image packaging.  
@@ -153,8 +153,37 @@ Host Machine (Ubuntu)
 
 ---
 
+## Basic Workflow
+
+When KIWI builds a Linux image, it follows these steps:
+
+1. First, it reads the image description which is specified in a `config.xml` or `.kiwi` file. This file tells KIWI what kind of image to make (e.g., ISO, virtual disk, etc.), which packages to include, and other settings.
+2. Then, it enters the **Prepare Phase**, where it creates a root tree containing all the future system files. It installs all packages from the repository that you defined.
+3. Then, it enters the **Create Phase**, where it converts the root tree into the final image format (ISO, VMDK, container, etc.)
+
+Your image is then ready to be booted!
+
+---
+
+## Useful Commands
+
+The basic syntax of any KIWI NG command is `kiwi-ng [--global-options] service <command> [args]`. For more details, see [global options](https://osinside.github.io/kiwi/commands/kiwi.html).
+
+1. `kiwi-ng result list`: Lists build results from a previous `build` or `create` command. [Options](https://osinside.github.io/kiwi/commands/result_list.html#options) are listed here.
+2. `kiwi-ng result bundle`: Bundles all related build files in a single bundle file for easy transfer, storing or sharing. [Options](https://osinside.github.io/kiwi/commands/result_bundle.html#options) are listed here.
+3. `kiwi-ng system build`: Builds an image from a description. It runs both `prepare` and `create` commands. [Options](https://osinside.github.io/kiwi/commands/system_build.html#options) are listed here.
+4. `kiwi-ng system prepare`: Sets up a new image root directory from the specified XML description. [Options](https://osinside.github.io/kiwi/commands/system_prepare.html#options) are listed here.
+5. `kiwi-ng system create`: Creates an image from the previously specified image root directory. [Options](https://osinside.github.io/kiwi/commands/system_create.html#options) are listed here.
+6. `kiwi-ng system update`: Updates a previously prepared image root tree. [Options](https://osinside.github.io/kiwi/commands/system_update.html#options) are listed here.
+7. `kiwi-ng image resize`: Allows resizing for disk-based images. [Options](https://osinside.github.io/kiwi/commands/image_resize.html#options) are listed here.
+8. `kiwi-ng image info`: Provides information about a specified image description. [Options](https://osinside.github.io/kiwi/commands/image_info.html#options) are listed here.
+
+---
+
 ---
 
 ## Resources & Documentation
 
 This is the craziest technology I have ever worked on. It has so little documentation on the Internet that learning it gives you a headache. I found no YouTube videos or other resources on usual websites. My only source was the [official documentation](https://osinside.github.io/kiwi/index.html), and some help from ChatGPT for explaining the entire ordeal.
+
+> **EDIT:** I gave some time, and read the documentation and it doesn't feel that difficult. Essentially, KIWI NG is a tool which builds an image (a fully-configured Linux system) from an XML file. These images can be used to run virtual machines, create bootable USB drives, containers and more.
