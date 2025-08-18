@@ -36,3 +36,7 @@ All notable learning updates to **The Infinity Journal** will be documented in t
 - Added image structure details in KIWI NG
 - Started Jenkins in DevOps
 - Added XML in Data Formats
+
+## Day 6 / ∞ []
+
+- Added zypper package manager in Linux

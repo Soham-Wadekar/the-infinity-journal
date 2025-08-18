@@ -13,6 +13,7 @@ My ambition is simple: to explore the entirety of the digital universe as I can 
 
 - [Data Formats](./data-formats/)
 - [DevOps](./devops/)
+- [Linux](./linux/)
 - [Python](./python/)
 - [System Building](./system-building/)
 - [CHANGELOG](CHANGELOG.md)
