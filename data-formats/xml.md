@@ -67,8 +67,24 @@ XML is strict about how you write it. If you break these rules, a parser will fa
 
 ### Elements and Attributes
 
+Elements holds data or can contain child elements. Attributes add extra information about the elements.
+
 ### XML Declaration
 
-### Nesting and Well-Formatted Documents
+It is declared at the top of the file. It is optional, but recommended.
 
-### Comments and CDATA
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+```
+
+### CDATA
+
+Wrap text you want the parser to leave alone.
+
+```xml
+<script><![CDATA[
+  if(a < b && b > c) alert("Hello!");
+]]></script>
+
+```

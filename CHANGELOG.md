@@ -37,6 +37,7 @@ All notable learning updates to **The Infinity Journal** will be documented in t
 - Started Jenkins in DevOps
 - Added XML in Data Formats
 
-## Day 6 / ∞ []
+## Day 6 / ∞ [2025-08-18]
 
 - Added zypper package manager in Linux
+- Added XML basics
