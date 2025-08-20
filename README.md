@@ -11,6 +11,7 @@ My ambition is simple: to explore the entirety of the digital universe as I can 
 
 ## 📚 Contents
 
+- [Agile and Scrum](./agile-and-scrum/)
 - [Data Formats](./data-formats/)
 - [DevOps](./devops/)
 - [Linux](./linux/)

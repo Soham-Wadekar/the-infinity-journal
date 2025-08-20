@@ -45,3 +45,7 @@ All notable learning updates to **The Infinity Journal** will be documented in t
 ## Day 7 / ∞ [2025-08-19]
 
 - Added Makefile to DevOps
+
+## Day 8 / ∞ [2025-08-20]
+
+- Added Scrum terminology
