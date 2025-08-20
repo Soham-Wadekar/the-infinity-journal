@@ -41,3 +41,7 @@ All notable learning updates to **The Infinity Journal** will be documented in t
 
 - Added zypper package manager in Linux
 - Added XML basics
+
+## Day 7 / ∞ [2025-08-19]
+
+- Added Makefile to DevOps

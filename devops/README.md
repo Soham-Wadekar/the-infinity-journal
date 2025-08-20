@@ -10,6 +10,7 @@ Here you'll find everything I've learned (and continue to learn) about DevOps �
 
 - [Containers & Docker](./docker.md)
 - [Jenkins](./jenkins.md)
+- [Makefile](./makefile.md)
 
 > ⚠️ Work in Progress: Some of these notes are incomplete or in draft form. Updates will be made continuously.
 
