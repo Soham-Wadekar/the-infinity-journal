@@ -50,7 +50,7 @@ A Makefile consists of rules, and each rule has three parts.
 2. **Dependencies:** Files or targets that must exists or be up-to-date
 3. **Recipe:** Shell commands to be run (must start with a TAB)
 
-```makefile
+```Makefile
 target: dependencies
     recipe (command)
 
@@ -60,7 +60,7 @@ target: dependencies
 
 Variables help avoid repetition and improves maintainability.
 
-```makefile
+```Makefile
 PYTHON = python3
 
 run:
@@ -68,6 +68,29 @@ run:
 ```
 
 ## Phony Targets
+
+Normally, `make` thinks every target is a file it needs to build. So, for example,
+
+```Makefile
+test:
+    pytest -v
+```
+
+If there is no file named `test` in your project, the command runs like normal. But if there IS, then make says `“Hey, the target is already up-to-date. Nothing to do.”` and so, the test command never runs.
+
+So you mark it as phony, meaning: _“This is not a file. It’s just a task. Always run it when I say so.”_
+
+```Makefile
+.PHONY: test run
+
+test:
+    pytest -v
+
+run:
+    python main.py
+```
+
+It always runs the command (removing caches), instead of checking if a file named `test` exists.
 
 ## Pattern Rules
 

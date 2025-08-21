@@ -49,3 +49,7 @@ All notable learning updates to **The Infinity Journal** will be documented in t
 ## Day 8 / ∞ [2025-08-20]
 
 - Added Scrum terminology
+
+## Day 9 / ∞ [2025-08-21]
+
+- Added intermediate concepts to Makefile
