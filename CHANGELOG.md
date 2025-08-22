@@ -53,3 +53,7 @@ All notable learning updates to **The Infinity Journal** will be documented in t
 ## Day 9 / ∞ [2025-08-21]
 
 - Added intermediate concepts to Makefile
+
+## Day 10 / ∞ [2025-08-22]
+
+- Did not get much time today. just created a skeleton of Linux file system
