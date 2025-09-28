@@ -57,3 +57,8 @@ All notable learning updates to **The Infinity Journal** will be documented in t
 ## Day 10 / ∞ [2025-08-22]
 
 - Did not get much time today. just created a skeleton of Linux file system
+
+## Day 11 / ∞ [2025-09-28]
+
+- Added Linux File Hierarchy System
+- Added common Linux commands

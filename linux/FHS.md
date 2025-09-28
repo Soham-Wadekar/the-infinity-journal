@@ -11,26 +11,6 @@ Understanding FHS helps you navigate, configure, and troubleshoot Linux systems 
 
 - [Overview](#overview)
 - [Key Directories](#key-directories)
-  - [/bin](#bin)
-  - [/boot](#boot)
-  - [/dev](#dev)
-  - [/etc](#etc)
-  - [/home](#home)
-  - [/lib](#lib)
-  - [/media](#media)
-  - [/mnt](#mnt)
-  - [/proc](#proc)
-  - [/opt](#opt)
-  - [/root](#root)
-  - [/run](#run)
-  - [/sbin](#sbin)
-  - [/srv](#srv)
-  - [/sys](#sys)
-  - [/tmp](#tmp)
-  - [/usr](#usr)
-  - [/var](#var)
-<!-- - [Safe vs Unsafe](#safe-vs-unsafe)
-- [Commands to Explore](#commands-to-explore) -->
 
 ---
 
@@ -44,38 +24,20 @@ Understanding FHS helps you navigate, configure, and troubleshoot Linux systems 
 
 ## Key Directories
 
-### /bin
-
-### /boot
-
-### /dev
-
-### /etc
-
-### /home
-
-### /lib
-
-### /media
-
-### /mnt
-
-### /opt
-
-### /proc
-
-### /root
-
-### /run
-
-### /sbin
-
-### /srv
-
-### /sys
-
-### /tmp
-
-### /usr
-
-### /var
+- bin : Essential executable binaries like `ls`, `cd`, etc.
+- boot : Data required for booting the device
+- dev : Location of special or device files (disks, USBs, etc.)
+- etc : Configuration files. Host specific add-ons are added inside `/etc/opt/`
+- home : Home directory for users
+- lib : Essential shared libraries and kernel modules
+- media : Mount point for removable media (floppy disks, cdroms or zip disks)
+- mnt : Mount point for temporary mounted systems
+- opt : Add-on application software packages
+- proc : Virtual file system with kernel and process info
+- root : Home directory for root user
+- run : Runtime variable data
+- sbin : System binaries -> symlinked with `/bin`
+- srv : Data for services provided by the system
+- tmp : Temporary files
+- usr : Shared, read-only system-wide data and programs, including user-space applications, libraries, and documentation
+- var : Variable data like logs, spool files, etc.
