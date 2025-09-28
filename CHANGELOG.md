@@ -60,5 +60,5 @@ All notable learning updates to **The Infinity Journal** will be documented in t
 
 ## Day 11 / ∞ [2025-09-28]
 
-- Added Linux File Hierarchy System
+- Added Linux File Hierarchy Standard
 - Added common Linux commands
