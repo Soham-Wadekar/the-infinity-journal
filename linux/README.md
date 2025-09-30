@@ -8,7 +8,13 @@ Here you'll find everything I've learned (and continue to learn) about Linux —
 
 ## 📚 Contents
 
+- [File Hierarchy Standard](./FHS.md)
+- [Linux Commands](./linux-commands.md)
+- [Bash Scripting](./bash-scripting.md)
 - [Package Managers](./package-managers/)
+  - [Zypper](./package-managers/zypper.md)
+- [Command Line Editors](./command-line-editors/)
+  - [Vi IMproved](./command-line-editors/vim.md)
 
 > ⚠️ Work in Progress: This section is continuously evolving as I deepen my understanding of Linux systems.
 
@@ -26,9 +32,6 @@ Learning Linux is not just about commands; it’s about mastering a way of think
 ## 🛠️ How to Use
 
 Each `.md` file covers a specific topic or tool.  
-
-- `distros/` contains notes on individual Linux distributions.  
-- `package-managers/` contains deep dives into package management tools.  
 
 Follow them in order if you’re building a foundational understanding, or jump into the distro or tool you’re currently using.
 
