@@ -62,3 +62,8 @@ All notable learning updates to **The Infinity Journal** will be documented in t
 
 - Added Linux File Hierarchy Standard
 - Added common Linux commands
+
+## Day 12 / ∞ [2025-09-30]
+
+- Added Bash scripting
+- Added VIM in Linux command line editors
