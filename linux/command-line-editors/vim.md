@@ -19,7 +19,7 @@ This guide covers the essential Vim commands, modes, and shortcuts to navigate, 
 ## Modes
 
 | **Key(s)** | **Action** |
-|------------|------------|
+| ------------ | ------------ |
 | `i` | Insert before cursor |
 | `a` | Insert after cursor |
 | `o` | Open new line below & insert |
@@ -30,7 +30,7 @@ This guide covers the essential Vim commands, modes, and shortcuts to navigate, 
 ## Navigation
 
 | **Key(s)** | **Action** |
-|------------|------------|
+| ------------ | ------------ |
 | `h` / `l` | Move left / right |
 | `j` / `k` | Move down / up |
 | `0` / `^` / `$` | Start of line / First non-blank / End of line |
@@ -43,7 +43,7 @@ This guide covers the essential Vim commands, modes, and shortcuts to navigate, 
 ## Editing
 
 | **Key(s)** | **Action** |
-|------------|------------|
+| ------------ | ------------ |
 | `x` | Delete character |
 | `dd` | Delete (cut) line |
 | `yy` | Yank (copy) line |
@@ -55,7 +55,7 @@ This guide covers the essential Vim commands, modes, and shortcuts to navigate, 
 ## Search & Replace
 
 | **Key(s)** | **Action** |
-|------------|------------|
+| ------------ | ------------ |
 | `/word` / `?word` | Search forward / backward |
 | `n` | Repeat search |
 | `:%s/old/new/g` | Replace all “old” with “new” |
@@ -65,7 +65,7 @@ This guide covers the essential Vim commands, modes, and shortcuts to navigate, 
 ## Save & Exit
 
 | **Key(s)** | **Action** |
-|------------|------------|
+| ------------ | ------------ |
 | `:w` | Save file |
 | `:q` | Quit |
 | `:wq` | Save & quit |
