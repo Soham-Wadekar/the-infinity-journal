@@ -67,3 +67,8 @@ All notable learning updates to **The Infinity Journal** will be documented in t
 
 - Added Bash scripting
 - Added VIM in Linux command line editors
+
+## Day 13 / ∞ [2025-12-26]
+
+- Corrected markdown lint in VIM
+- Added Makefile in Build and Automation
