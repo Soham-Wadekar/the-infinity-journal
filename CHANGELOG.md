@@ -72,3 +72,7 @@ All notable learning updates to **The Infinity Journal** will be documented in t
 
 - Corrected markdown lint in VIM
 - Added Makefile in Build and Automation
+
+## Day 14 / ∞ [2025-12-31]
+
+- Added Makefile Intermediates to Build and Automation

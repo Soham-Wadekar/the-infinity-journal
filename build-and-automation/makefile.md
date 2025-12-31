@@ -9,10 +9,17 @@ Although originally designed for compiling C/C++ programs, Makefiles are now wid
 
 ## 📚 Contents
 
-- [Makefile Basics](#makefile-basics)
+- [Makefile Basics](#-makefile-basics)
   - [Dependencies](#dependencies)
   - [Variables](#variables)
   - [Phony Targets](#phony-targets)
+- [Makefile Intermediates](#-makefile-intermediates)
+  - [Automatic Variables](#automatic-variables)
+  - [Pattern Rules](#pattern-rules)
+  - [Makefile Verbosity](#makefile-verbosity)
+  - [Chaining Commands](#chaining-commands)
+  - [Modularization](#modularization)
+  - [Variables from the Command Line](#variables-from-the-command-line)
 
 ---
 
@@ -30,7 +37,7 @@ They act as a **single entry point** for project operations such as build, test,
 
 ---
 
-## Makefile Basics
+## 🟢 Makefile Basics
 
 `make` is a build orchestration tool that decides what commands to run, in what order, and only when needed, based on file dependencies.
 
@@ -108,3 +115,144 @@ test:
 
 `.PHONY` tell `make` that the target is an action NOT a file.
 > Use .PHONY for any target that represents an **action**, not a file.
+
+## 🟡 Makefile Intermediates
+
+### Automatic Variables
+
+Automatic variables are not set by the user but rather expand when the target is called. They remove repetition and make rules reusable.
+
+|Variable|Meaning|
+|----------|---------|
+|`$@`|Target name|
+|`$<`|First dependency|
+|`$^`|All dependencies|
+|`$*`|Stem (pattern match)|
+
+Example:
+
+```Makefile
+output.txt: input.txt
+    cp $< $@
+```
+
+is equivalent to
+
+```bash
+cp input.txt output.txt
+```
+
+### Pattern Rules
+
+Sometimes we need to create same rules for multiple different files. In such scenarios, instead of separate targets, we can write a single pattern rule using `%`.
+
+```Makefile
+%.out: %.in
+    cp $< $@
+```
+
+This means, that any file with the extension `.out` can be called as a target, as long as an equivalent `.in` file is present.
+
+If a file needs to be created inside a directory, but the directory might not be present, a small fallback can be added using `|`
+
+```Makefile
+build/%.out: src/%.in | build
+    cp $< $@
+
+build:
+    mkdir -p build
+```
+
+Creates `build` directory if it doesn't exist, so that the target doesn't fail.
+
+### Makefile Verbosity
+
+The default output of a Makefile is verbose. That means, Makefile will always print the command while running. There are multiple methods to avoid that.
+
+#### Silent command
+
+Prefix the command with a `@`
+
+```Makefile
+target:
+    @echo
+```
+
+#### Silent entire Makefile
+
+Add this to the top
+
+```Makefile
+MAKEFLAGS += --silent
+```
+
+#### Toggle verbosity
+
+```Makefile
+ifeq ($(V),1)
+    Q :=
+else
+    Q := @
+endif
+
+build:
+    $(Q)echo "Building..."
+```
+
+```bash
+make        # silent
+make V=1    # verbose
+```
+
+### Chaining Commands
+
+Make runs every line in a separate shell, so listing down commands isn't feasible. Commands can be chained using `&&` or `; \`
+
+```Makefile
+build:
+    cd dir && build_something
+
+test:
+    cd dir; \
+    test_something; \
+    echo Done!
+```
+
+> Hint: Avoid running many commands in a single target. Keep them inside scripts instead of a Make rule, as Make is a build orchestration tool and not a scripting language.
+
+### Modularization
+
+Make parses first, executes later. Different Makefiles can be added using the keyword `include`. It basically tells Make, *"“Before you finish parsing, paste the contents of the included Makefile here.”"*. It basically creates a huge Makefile (there is no boundary between files). It is textual inclusion, not function calls, not imports.
+
+Syntax:
+
+```Makefile
+include config.mk
+```
+
+Variables and targets are defined globally, but can be overridden if the variable is redefined *after* the import.
+
+If a file doesn't exist, we can include it optionally. It is also usually paired with [conditional imports]().
+
+```Makefile
+-include config.mk
+sinclude config.mk
+```
+<!-- Add link here when defined -->
+
+### Variables from the Command Line
+
+Variables can be passed through the command line. They can override the variables defined in the Makefile.
+
+```Makefile
+IMAGE = default.img
+
+build:
+    echo "Building $(IMAGE)"
+```
+
+Override `IMAGE` as follows:
+
+```bash
+make IMAGE=test.img
+```
