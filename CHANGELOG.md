@@ -76,3 +76,7 @@ All notable learning updates to **The Infinity Journal** will be documented in t
 ## Day 14 / ∞ [2025-12-31]
 
 - Added Makefile Intermediates to Build and Automation
+
+## Day 15 / ∞ [2026-01-04]
+
+- Added Advanced Makefile to Build and Automation
